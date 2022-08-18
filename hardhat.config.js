@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require('dotenv').config()
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -21,7 +22,7 @@ module.exports = {
   networks: {
     ftmTest: {
       url: `https://rpc01-sg.dogechain.dog`,
-      accounts: [``],
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
 };
